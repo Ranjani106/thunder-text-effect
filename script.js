@@ -1,4 +1,4 @@
-let canvas, ctx, w, h, thunder, text, particles, input;
+let canvas, ctx, w, h, thunder, text, particles;
 
 function Thunder(options) {
   options = options || {};
@@ -225,15 +225,15 @@ function render() {
       y: y }));
 
   });
-  let cb = 0;
-  input.addEventListener('keyup', e => {
-    clearTimeout(cb);
-    cb = setTimeout(() => {
-      text = new Text({
-        copy: input.value });
+  // let cb = 0;
+  // input.addEventListener('keyup', e => {
+  //   clearTimeout(cb);
+  //   cb = setTimeout(() => {
+  //     text = new Text({
+  //       copy: input.value });
 
-    }, 300);
-  });
+  //   }, 300);
+  // });
   //
   loop();
 })();
